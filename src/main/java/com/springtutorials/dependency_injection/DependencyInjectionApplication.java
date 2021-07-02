@@ -15,13 +15,11 @@ public class  DependencyInjectionApplication {
 
         MyController myController = (MyController) context.getBean("myController");
 
-        String greeting = myController.sayHello();
-
-        System.out.println("Greeting from MyController: "+ greeting );
+        System.out.println(myController.getGreeting());
 
         PropertyInjectedController propertyInjectedController = (PropertyInjectedController) context.getBean("propertyInjectedController");
 
-        System.out.println("Greeting from Property Injection: "+propertyInjectedController.getGreeting());
+        System.out.println(propertyInjectedController.getGreeting());
 
     }
 
